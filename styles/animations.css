@@ -12,3 +12,135 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+.theme-menu__button::after {
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .theme-menu__button:focus-visible:after {
+    transform: scaleX(1);
+  }
+
+.theme-menu__button:hover {
+    transition:  0.3s ease;
+  }
+
+  .theme-menu__button:disabled {
+    transition: 0.3s ease;
+  }
+
+  .button_like:focus-visible {
+    transition: 0.3s ease-in-out;
+  }
+
+  .like-icon-container:focus-visible {
+    transition: 0.3s ease-in-out;
+   }
+
+   .button_like::before {
+    transition: 0.5s ease-in-out;
+    transform-origin: left;
+    transform: scaleX(0);
+
+  }
+  .theme-menu__button:disabled::before{
+    animation: amplitude 0.5s ease-in-out infinite;
+    inset-inline-start: -20px;
+  }
+
+  .button_like:hover::before {
+    transform: scaleX(1);
+    cursor: pointer;
+  }
+
+.like_icon:hover .core{
+    fill: var(--text-color); 
+    opacity: 1; 
+    transition: opacity 0.3s ease 0s;
+  }
+  
+  .like_icon:not(:hover) .core {
+    fill: var(--text-color);
+    opacity: 0;
+    transition: opacity 0.3s ease 0.03s;
+  }
+
+  .like_icon:hover .main-body{
+    fill: var(--text-color);
+    opacity: 1; 
+    transition: opacity 0.3s ease 0.05s;
+  }
+
+  .like_icon:not(:hover) .main-body {
+    fill: var(--text-color);
+    opacity: 0;
+    transition: opacity 0.3s ease 0s;
+  }
+
+  .like_icon:active .core{
+    fill: var(--red-color); 
+  transition: fill 0.3s linear 0s;
+  opacity: 1;
+  }
+
+  .like_icon:active .main-body{
+    fill: var(--red-color); 
+    transition: fill 0.3s linear 0.06s;
+    opacity: 1;
+  }
+  
+  .like-icon.is-liked .core {
+    fill: var(--red-color); 
+    transition: fill 0.3s linear 0s;
+    opacity: 1;
+  }
+  
+  .like-icon.is-liked .main-body{
+    fill: var(--red-color); 
+    transition: fill 0.3s linear 0.06s;
+    opacity: 1;
+  }
+
+  .like-icon.is-liked .contuor {
+    fill: var(--red-color); 
+  transition: fill 0.3s linear 0.09s;
+  opacity: 1;
+  }
+
+  .like-icon.is-liked .heart {
+    animation: heartscale 0.3s  ease-in 0.1s ;
+    transform-origin: center;
+  }
+
+  .like-icon.is-liked .sparks {
+    animation: sparksopacity 0.3s  ease-in 0.3s;
+  
+  }
+
+  @keyframes amplitude {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(4px);
+    }
+  }
+
+  @keyframes sparksopacity {
+    from {
+     opacity: 0;
+    }
+    to {
+     opacity: 1;
+    }
+   }
+   
+  @keyframes heartscale {
+   from {
+    transform: scale(1);
+   }
+   to {
+    transform: scale(1.5);
+   }
+  }
