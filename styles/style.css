@@ -376,6 +376,8 @@ opacity: 0;
 .floppy-dialog {
   width: 40px;
   height: 40px;
+  fill: var(--mix-color);
+  mix-blend-mode: difference;
 }
 
 .close {
