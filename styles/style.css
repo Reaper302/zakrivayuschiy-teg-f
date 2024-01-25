@@ -340,6 +340,7 @@ opacity: 0;
 .dialog [open] {
     display: grid;
   grid-template-rows: 2fr;
+  
 }
 
 .dialog  {
@@ -352,12 +353,12 @@ opacity: 0;
   font-weight: 400;
   text-transform: uppercase;
   font-style: normal;
-  padding: 32px 42px 32px 42px;
+  padding: 30px 30px 30px 30px;
 }
 
 .dialog::backdrop {
   opacity: 0.75;
-  background: black
+  background: black;
 }
 
 .text-dialog {
@@ -378,13 +379,13 @@ opacity: 0;
 }
 
 .close {
- height: 38px;
- color: var(--mix-color);
+  height: 38px;
+  width: 293px;
+  color: var(--mix-color);
   font-family: var(--font-family-heading);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 90%;
   text-transform: uppercase;
   margin-top: 25px;
 }
@@ -462,4 +463,11 @@ box-shadow: none;
     gap: 48px;
   }
 
+  .dialog {
+    margin: auto 17px auto 17px;
+  }
+
+  .close {
+    max-width: 257px;
+  }
 }
