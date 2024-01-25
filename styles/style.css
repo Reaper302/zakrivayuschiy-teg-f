@@ -348,7 +348,7 @@ opacity: 0;
   max-width: 357px;
   max-height: 193px;
   font-family: var(--font-family-heading);
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 400;
   text-transform: uppercase;
   font-style: normal;
@@ -380,13 +380,17 @@ opacity: 0;
 .close {
  height: 38px;
  color: var(--mix-color);
-font-family: var(--font-family-heading);
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 90%;
-text-transform: uppercase;
-margin-top: 25px;
+  font-family: var(--font-family-heading);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+.close:focus-visible {
+box-shadow: none;
 }
 
 .close_text {
