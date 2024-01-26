@@ -14,8 +14,8 @@
     --border-color: var(--green-color);
     --mix-color: var(--green-color);
     --heart-color: var(--green-color);
-    --font-weight-text: 465px;
-    --font-weight-text-heading: 785px;
+    --font-weight-text: 465;
+    --font-weight-text-heading: 785;
 }
 
 :root.theme-light {
@@ -28,8 +28,8 @@
     --border-color: var(--black-color);
     --mix-color: var(--white-color);
     --heart-color: var(--black-color);
-    --font-weight-text: 400px;
-    --font-weight-text-heading: 700px;
+    --font-weight-text: 400;
+    --font-weight-text-heading: 700;
 }
 
 @media (prefers-color-scheme :dark) {
@@ -59,7 +59,7 @@
         --border-color: var(--black-color);
         --mix-color: var(--white-color);
         --heart-color: var(--black-color);
-        --font-weight-text: 400px;
-        --font-weight-text-heading: 700px;
+        --font-weight-text: 400;
+        --font-weight-text-heading: 700;
     }
 }
