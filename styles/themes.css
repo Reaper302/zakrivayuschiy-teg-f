@@ -8,28 +8,28 @@
     --background: repeating-linear-gradient(to left, transparent 0 2px, #000 0 4px),
     repeating-linear-gradient(to bottom, transparent 0 2px, #000 0 4px),
     linear-gradient(to bottom, #007f0c, #004306);
-    --font-family-text: "Inter", "PressStart2P";
+    --font-family-text: "Inter", sans-serif;
     --text-color: var(--green-color);
     --background-color-all: var(--black-color);
     --border-color: var(--green-color);
-    --text-weight: var(--font-weight-text-dark);
-    --text-heading-weiht: var(--font-weight-heading-dark);
     --mix-color: var(--green-color);
     --heart-color: var(--green-color);
+    --font-weight-text: 465px;
+    --font-weight-text-heading: 785px;
 }
 
 :root.theme-light {
     --background: repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 0 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 0 4px),
     linear-gradient(to bottom, #d3d3d3 0.1%, #000);
-    --font-family-text: "Inter", "PressStart2P";
+    --font-family-text: "Inter", sans-serif;
     --text-color: var(--black-color);
     --background-color-all: var(--white-color);
     --border-color: var(--black-color);
-    --text-weight: var(--font-weight-text-light);
-    --text-heading-weiht: var(--font-weight-heading-light);
     --mix-color: var(--white-color);
     --heart-color: var(--black-color);
+    --font-weight-text: 400px;
+    --font-weight-text-heading: 700px;
 }
 
 @media (prefers-color-scheme :dark) {
@@ -37,14 +37,14 @@
     --background: repeating-linear-gradient(to left, transparent 0 2px, #000 0 4px),
     repeating-linear-gradient(to bottom, transparent 0 2px, #000 0 4px),
     linear-gradient(to bottom, #007f0c, #004306);
-    --font-family-text: "Inter", "PressStart2P";
+    --font-family-text: "Inter", sans-serif;
     --text-color: var(--green-color);
     --background-color-all: var(--black-color);
     --border-color: var(--green-color);
-    --text-weight: var(--font-weight-text-dark);
-    --text-heading-weiht: var(--font-weight-heading-dark);
     --mix-color: var(--green-color);
     --heart-color: var(--green-color);
+    --font-weight-text: 465px;
+    --font-weight-text-heading: 785px;
     }
 }
 
@@ -53,13 +53,13 @@
         --background: repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 0 4px),
         repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 0 4px),
         linear-gradient(to bottom, #d3d3d3 0.1%, #000);
-        --font-family-text: "Inter", "PressStart2P";
+        --font-family-text: "Inter", sans-serif;
         --text-color: var(--black-color);
         --background-color-all: var(--white-color);
         --border-color: var(--black-color);
-        --text-weight: var(--font-weight-text-light);
-        --text-heading-weiht: var(--font-weight-heading-light);
         --mix-color: var(--white-color);
         --heart-color: var(--black-color);
+        --font-weight-text: 400px;
+        --font-weight-text-heading: 700px;
     }
 }

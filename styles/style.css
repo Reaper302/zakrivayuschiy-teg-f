@@ -24,6 +24,12 @@
   place-items: center;
 }
 
+.head-section {
+  display: grid;
+  gap: 50px;
+  place-items: center;
+}
+
 .header {
   margin-top: 102px;
   margin-bottom: 100px;
@@ -56,10 +62,10 @@
 }
 
 .header__theme-menu {
-display: grid;
-justify-content: center;
-width: min-content;
-padding-left: 25px;
+  display: grid;
+  justify-content: center;
+  width: min-content;
+  padding-left: 25px;
 }
 
 .heading {
@@ -82,6 +88,7 @@ padding-left: 25px;
   text-transform: uppercase;
   position: relative;
   padding: 0;
+  transition: 0.3s ease;
 }
 
 .theme-menu__button:hover {
@@ -96,7 +103,6 @@ padding-left: 25px;
 
 .theme-menu__button:focus {
   border: none;
-  outline: none;
   opacity: 0.6;
 }
 
@@ -109,18 +115,26 @@ padding-left: 25px;
   height: 10%;
   background-color: var(--text-color);
   transform-origin: left bottom;
+  transform: scaleX(0);
+}
+
+.theme-menu__button:focus-visible:after {
+  transform: scaleX(1);
 }
 
 .theme-menu__button:disabled::before{
   position: absolute;
+  top: 0;
+  left: 0;
   content: "▶";
+  animation: amplitude 1s ease-in-out infinite alternate;
+  inset-inline-start: -20px;
 }
 
 .main {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 52px;
 }
 
@@ -134,12 +148,13 @@ padding-left: 25px;
 
 .section-item {
   display: grid;
-  place-items: center;
+  justify-content: center;
   gap: 25px;
 }
 
 .image {
   width: 100%;
+  max-width: 696px;
   object-fit: cover;
   display: block;
   object-position: center;
@@ -148,7 +163,7 @@ padding-left: 25px;
 .main-text {
   padding: 0px 25px 0px 25px;
   font-family: var(--font-family-text, sans-serif);
-  font-weight: var(--text-weight);
+  font-weight: var(--font-weight-text);
   font-size: 18px;
   font-style: normal;
   line-height: 21px;
@@ -159,7 +174,7 @@ padding-left: 25px;
   font-family: var(--font-family-text);
   font-size: 18px;
   font-style: normal;
-  font-weight: var(--text-heading-weiht);
+  font-weight: var(--font-weight-text-heading:);
   line-height: normal;
   width: 100%;
 }
@@ -181,8 +196,14 @@ padding-left: 25px;
   outline:none
 }
 
+.like-icon-container {
+  margin-top: 2px;
+  max-height: 34px;
+ }
+
 .like-icon-container:focus-visible {
  box-shadow: 0px 0px 0px 2px var(--text-color);
+ transition: 0.3s ease-in-out;
 }
 
  .like-icon:hover {
@@ -194,10 +215,6 @@ padding-left: 25px;
 }
 
 .button_like {
-background: none;
-
-}
-.button_like {
   z-index: 1;
   font-family: var(--font-family-heading);
   display: flex;
@@ -206,7 +223,10 @@ background: none;
   border: 2px solid var(--border-color);
   position: relative;
   overflow: hidden;
-  background-color: var(--background-color-all)
+  background-color: var(--background-color-all);
+  transition: 0.3s ease-in-out;
+  border: 2px solid var(--text-color);
+  gap: 8px;
 }
 
 .card__like-button {
@@ -215,8 +235,18 @@ background: none;
 }
 
 .card-button {
+  font-family: var(--font-family-heading);
+  width: 335px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   mix-blend-mode: difference;
   color: var(--mix-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
 }
 
 .button_like:focus-visible {
@@ -232,10 +262,15 @@ background: none;
   background-color: var(--text-color);
   width: 100%;
   height: 100%;
+  transition: 0.5s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0);
 }
 
 .button_like:hover::before {
   color: var(--background-color-all);
+  transform: scaleX(1);
+  cursor: pointer;
 }
 
 .button_like{
@@ -244,16 +279,7 @@ background: none;
 }
 
 .button_like:hover{
-cursor: pointer;
-}
-
-.button__text {
-  font-family: var(--font-family-heading);
-  width: 335px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  cursor: pointer;
 }
 
 .lable {
@@ -272,12 +298,9 @@ cursor: pointer;
 
 @supports ((text-stroke: 1px var(--background-color-all)) or (-webkit-text-stroke: 1px var(--background-color-all))) {
   .lable {
-    -webkit-text-stroke: 1px var(--background-color-all)
-  }
-}
-@supports not ((text-stroke: 1px var(--background-color-all)) or (-webkit-text-stroke: 1px var(--background-color-all))) {
-  .lable { 
-    text-shadow: 0 0 1px var(--background-color-all) 
+    -webkit-text-stroke: 1px var(--background-color-all);
+    text-stroke: 1px var(--background-color-all);
+    text-shadow: none;
   }
 }
 
@@ -307,10 +330,6 @@ opacity: 0;
   min-height: 51px;
 }
 
-.dialog-button:focus-visible {
- box-shadow: none;
-}
-
 .dialog-button-item {
   width: min-content;
   white-space: nowrap;
@@ -322,7 +341,7 @@ opacity: 0;
   justify-content: center;
   width: 100%;
   max-width: 336px;
-  margin: 50px 35px 100px 35px;
+  margin: 0px 35px 100px 35px;
   font-family: var(--font-family-heading);
   font-size: 14px;
   font-style: normal;
@@ -335,19 +354,18 @@ opacity: 0;
   width: 21px;
   height: 21px;
   mix-blend-mode: difference;
+  margin-top: 7px;
 }
 
 .dialog [open] {
-    display: grid;
+  display: grid;
   grid-template-rows: 2fr;
-  
 }
 
 .dialog  {
   background-color: var(--background-color-all);
   border: 2px solid var(--border-color);
   max-width: 357px;
-  max-height: 193px;
   font-family: var(--font-family-heading);
   font-size: 9px;
   font-weight: 400;
@@ -374,6 +392,7 @@ opacity: 0;
 }
 
 .floppy-dialog {
+  margin-top: 10px;
   width: 40px;
   height: 40px;
   fill: var(--mix-color);
@@ -392,44 +411,35 @@ opacity: 0;
   margin-top: 25px;
 }
 
-.close:focus-visible {
-box-shadow: none;
-}
-
-.close_text {
-  color: var(--mix-color);
-  mix-blend-mode: difference ;
-}
-
-.start {
+.start-grayscale {
   filter: grayscale(90%);
 }
 
-.clear-list {
+.clear-list-sepia {
   filter: sepia(20%);
 }
 
-.problem {
+.problem-blur {
   filter: blur(2px);
 }
 
-.perfect {
+.perfect-brightness {
   filter: brightness(140%);
 }
 
-.near {
+.near-contrast {
   filter: contrast(140%);
 }
 
-.strategy {
+.strategy-rotate {
   filter: hue-rotate(110deg);
 }
 
-.when {
+.when-saturate {
   filter: saturate(200%);
 }
 
-.now {
+.now-brightness__blur {
   filter: brightness(120%) blur(2px)
 }
 
@@ -459,14 +469,6 @@ box-shadow: none;
 
   .footer {
     max-width: 305px;
-  }
-
-  .main {
-    gap: 48px;
-  }
-
-  .dialog {
-    margin: auto 17px auto 17px;
   }
 
   .close {
