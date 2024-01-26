@@ -102,7 +102,7 @@
 }
 
 .theme-menu__button:focus {
-  border: none;
+  outline: none;
   opacity: 0.6;
 }
 
@@ -115,6 +115,7 @@
   height: 10%;
   background-color: var(--text-color);
   transform-origin: left bottom;
+  transition: transform 0.3s ease; 
   transform: scaleX(0);
 }
 
