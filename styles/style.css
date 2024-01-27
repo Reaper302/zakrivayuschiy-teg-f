@@ -163,7 +163,7 @@
 .main-text {
   padding: 0.4% 25px 0px 25px;
   font-family: var(--font-family-text, sans-serif);
-  font-weight: var(--font-weight-text);
+  font-variation-settings: 'wght' var(--font-weight-text);
   font-size: 18px;
   font-style: normal;
   line-height: 21px;
@@ -174,7 +174,7 @@
   font-family: var(--font-family-text);
   font-size: 18px;
   font-style: normal;
-  font-weight: var(--font-weight-text-heading:);
+  font-variation-settings: 'wght' var(--font-weight-text-heading);
   line-height: normal;
   width: 100%;
 }
