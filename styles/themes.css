@@ -43,8 +43,8 @@
     --border-color: var(--green-color);
     --mix-color: var(--green-color);
     --heart-color: var(--green-color);
-    --font-weight-text: 465px;
-    --font-weight-text-heading: 785px;
+    --font-weight-text: 465;
+    --font-weight-text-heading: 785;
     }
 }
 
