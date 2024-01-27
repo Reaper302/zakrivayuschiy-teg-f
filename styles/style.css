@@ -41,7 +41,6 @@
   background-color: var(--background-color-all);
   border: 2px solid var(--border-color);
   font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-text);
   box-sizing: border-box;
 }
 
